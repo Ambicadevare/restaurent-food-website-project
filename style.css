@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+    color: #000;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #1e1e1e;
+}
+
+.logo {
+    color: #ff9800;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #ff9800;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+
+#search {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.theme-btn {
+    background: #ff9800;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092");
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 44px;
+}
+
+.hero p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #ff9800;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* MENU */
+.menu {
+    padding: 70px 40px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.menu-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+}
+
+.menu-card span {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.menu-card button {
+    padding: 8px 15px;
+    background: #ff9800;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* CART */
+.cart {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+#cart-items {
+    list-style: none;
+    margin: 20px 0;
+}
+
+#cart-items li {
+    background: #f2f2f2;
+    padding: 10px;
+    margin: 10px auto;
+    width: 300px;
+    border-radius: 5px;
+}
+
+/* CONTACT */
+.contact {
+    padding: 60px 40px;
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: #aaa;
+    text-align: center;
+    padding: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasty Bites Restaurant</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <h1 class="logo">🍽️ Tasty Bites</h1>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#cart">Cart</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <input type="text" id="search" placeholder="Search food..." onkeyup="searchMenu()" />
+            <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+        </div>
+    </nav>
+
+    <!-- HERO / HOME -->
+    <section id="home" class="hero">
+        <h2>Delicious Food, Delivered Fresh</h2>
+        <p>Best biryanis & desserts in town</p>
+        <button class="btn">Order Now</button>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-grid" id="menu-items">
+            <!-- items from JS -->
+        </div>
+    </section>
+
+    <!-- CART -->
+    <section id="cart" class="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <h3 id="total-price">Total: ₹0</h3>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: tastybites@gmail.com</p>
+        <p>Phone: +91 7829498583</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Tasty Bites</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
